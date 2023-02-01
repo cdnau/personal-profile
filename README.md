@@ -1,4 +1,6 @@
 # personal-profile
+live website: https://audreycj.github.io/personal-profile/
+
 This was a formative assessment for our IT103P (Web Programming) course during my 2nd year as a Computer Science student.
 We were given the following instructions:
 
