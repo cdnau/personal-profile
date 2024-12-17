@@ -6,24 +6,26 @@
     <title>Chindanai Rueangsombat Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="photo\correct" href="photo\correct.png">
+    <link rel="logo" type="photo\correct" href="photo\correct.png">
 </head>
 <body>
+    <button onclick="toggleTheme()">Click for change Theme</button>
     <nav>
         <div class="container">
-            <ul>
+            <ul class="nav_links">
                 <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about me">About Me</a></li>
+                <li><a href="#project">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#Activities">Activities</a></li>
+                <li><a href="#activities">Activities</a></li>
             </ul>
         </div>
     </nav>
     
     <header>
         <div class="container">
-            <div class="logo">
+            <div class="Profile">
                 <img src="photo\6AA93121-718F-44CA-904B-0EECE9D37D2A.jpg"> 
             </div>
             <h1>Chindanai Rueangsombat</h1>
@@ -33,13 +35,11 @@
     <!-- เนื้อหาส่วนอื่น ๆ -->
 </body>
     <main>
-        <button onclick="toggleTheme()">Toggle Theme</button>
-        <br><a>click here for change the theme.</a>
-        <section id="about" class="container">
+        <section id="about me" class="container">
             <h2>About Me</h2>
             <p>Hi! I'm Chindanai Rueangsombat, a passionate learner aiming to make an impact in the field of technology. I am currently an M.6 student preparing for TCAS and excited to explore the world of software development and data science.</p>
         </section>
-        <section id="projects" class="container">
+        <section id="project" class="container">
             <h2>Projects</h2>
             <div class="project">
                 <h3>Game Development with Sandbox</h3>
@@ -87,17 +87,48 @@
                 <li>Sing</li>
             </ul>
         </section>
-        <section id="Activities" class="container">
+        <section id="activities" class="container">
+        <h2>Activities</h2>
         <div class="Activities">
-            <h3>Activities</h3>
-            <img src="it-support.jpg" alt="Music Contest" class="project-img">
-            <p>Gained hands-on experience in networking, troubleshooting, and coding during a one-month internship at Platinum Fruit co. ltd . Collaborated with senior IT staff to solve complex challenges.</p>
+            <h3>เล่นดนตรี เล่นกีตาร์และร้องเพลง</h3>
+            <img src="photo\band.png" alt="Tup42" class="project-img">
+            <img src="photo\Siam.png" alt="Siam" class="project-img">
+            <img src="photo\CB.jpg" alt="CB" class="project-img">
+            <img src="photo\CB2.jpg" alt="CB" class="project-img">
+            <p>ในระหว่างที่อยู่ชั้นม.4-ม.6 ผมได้ตั้งวงขึ้นมาและแสดงโชว์อย่างเช่น TUP42SHOW และยังมีโอกาศได้แสดงโชว์ในอีกหลายๆที่ไม่ว่าจะเป็น SIAM SQUARE, CENTRAL BANGNA, TRIAM UDOM SUKSA SCHOOL</p>
+            
+            <!--ลิงก์คลิปเล่นดนตรี-->
+            <div class="Clip">Click for watching <br>
+                <a href="https://www.youtube.com/watch?v=jNo2Kr_pN5E">Tup42show</a>
+                <a href="https://www.youtube.com/watch?v=j9i9uezL9X8">Siam </a><br>
+                <a href="https://www.youtube.com/watch?v=SgrzwrC6pSE">Central Bangna </a>
+            </div>
+
+            <div class="Activities">
+                <h3>ตัวแทนร้องเพลงงานเกษียนผู้อำนวยการ ปีการศึกษา 2567</h3>
+                <img src="photo\เกษียน1.jpg" alt="Tup42" class="project-img">
+                <img src="photo\เกษียน2.jpg" alt="Siam" class="project-img">
+                <p>เนื่องในปีศึกษา 2567 เป็นปีเกษียนของผู้อำนวยการจินตนา ศรีสารคามและครูท่านอื่นๆ ผมและเพื่อนได้ถูกเลือกเป็นตัวแทนในการร้องเพลงงานเกษียนนี้</p>
+
+            <div class="Activities">
+                <h3>แข่งขันฟุตบอล ในงานกีฬาสีโรงเรียนประจำปี 2567</h3>
+                <img src="photo\S__9003011.jpg" alt="match" class="project-img">
+                <p>ผมได้เข้าแข่งขันกีฬาฟุตบอล ในงานกีฬาสีของโรงเรียน โดยทีมของจบได้รางวัลที่2 ของตาราง</p>
+            
+            <div class="Activities">
+                <h3>เปิดหมวกรับบริจาค เป็นทุนให้แก่นักเรียนด้อยที่โอกาศ</h3>
+                <img src="photo\S__8773635.jpg" alt="match" class="project-img">
+                <img src="photo\LINE_ALBUM_เปิดหมวก_241217_1.jpg" alt="match" class="project-img">
+                <p>ผมและเพื่อนๆได้เปิดรับบริจาคเงินเพื่อเป็นทุนในการซื้ออุปกรณ์การเรียน การสอนของนักเรียนและคุณครู โรงเรียนวัดสันตยาราม</p>
         </div>
     </section>
         <section id="contact" class="container">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:cdn.au8@gmail.com">cdn.au8@gmail.com</a></p>
             <p>Phone: 080-850-1170</p>
+            <p>Facebook : <a href="https://www.facebook.com/Auuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu/">Chindanai Rueangsombat</a></p>
+            <p>Instagram : <a href="https://www.instagram.com/cdn.au/">cdn.au</a></p>
+            <p>Github : <a href="https://github.com/cdnau">cdnau</a></p>
         </section>
     </main>
     <footer>
