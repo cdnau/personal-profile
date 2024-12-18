@@ -311,6 +311,7 @@ button {
    margin-left: 45%;
    font-size: large;
    font-family:"Montserrat";
+   color: #000000;
 }
 
 button:hover {
