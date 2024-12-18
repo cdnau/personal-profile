@@ -56,7 +56,7 @@ head.dark-theme header {
 }
 
 header img {
-  max-width: 20%;
+  max-width: 30%;
   border: 5px solid #efc050;
   border-radius: 50%;
   animation: fadeIn 0.5s ease-in-out;
@@ -153,12 +153,33 @@ nav ul {
 }
 
 .project-img {
-  max-width: 22%;
-  height: auto;
   border-radius: 15px;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  width: 150px; /* กำหนดความกว้างตายตัว */
+  height: 150px; /* กำหนดความสูงตายตัว */
+  object-fit: cover;
+}
+
+.certi {
+  border-radius: 15px;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+  width: 20%; /* กำหนดความกว้างตายตัว */
+  height: auto; /* กำหนดความสูงตายตัว */
+  object-fit: cover;
+}
+
+.paper {
+  border-radius: 15px;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+  max-width: 20%;
+  height: auto;
+  object-fit: cover;
 }
 
 .project p {
@@ -224,6 +245,20 @@ body.dark-theme footer {
   background-color: var(--primary-color-dark);
 }
 
+@media (max-width: 768px) {
+  nav {
+    font-size: 14px; /* ลดขนาดตัวอักษร */
+    padding: 10px; /* ปรับช่องว่างให้พอดี */
+    display: flex;
+    flex-wrap: wrap; /* ให้ลิงก์ที่เกินไปเลื่อนไปบรรทัดใหม่ */
+    justify-content: center;
+  }
+
+  nav ul {
+    display: block; /* เปลี่ยนลิงก์ให้เรียงในแนวตั้ง */
+    margin: 5px 0; /* เพิ่มระยะห่างระหว่างลิงก์ */
+  }
+}
 
 .nav_links {
   list-style: none;
