@@ -175,7 +175,7 @@ body.dark-theme header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
   width: 100%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
-  max-height: 250px; /* กำหนดความสูงสูงสุด */
+  max-height: 300px; /* กำหนดความสูงสูงสุด */
   object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
   outline: auto;
 }
