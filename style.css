@@ -139,10 +139,24 @@ nav ul {
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
 }
 
+.container h1,p {
+  
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  font-family: "Kanit";
+}
+
 .project {
   margin-bottom: 2em;
   text-align: center;
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+}
+
+.project p {
+  margin-bottom: 2em;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  font-family: "Kanit";
 }
 
 .project h3 {
@@ -157,8 +171,8 @@ nav ul {
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-  width: 150px; /* กำหนดความกว้างตายตัว */
-  height: 150px; /* กำหนดความสูงตายตัว */
+  max-width: 100%; /* กำหนดความกว้างตายตัว */
+  height: 250px; /* กำหนดความสูงตายตัว */
   object-fit: cover;
 }
 
@@ -167,7 +181,7 @@ nav ul {
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out;
-  width: 20%; /* กำหนดความกว้างตายตัว */
+  width: 50%; /* กำหนดความกว้างตายตัว */
   height: auto; /* กำหนดความสูงตายตัว */
   object-fit: cover;
 }
@@ -177,7 +191,7 @@ nav ul {
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out;
-  max-width: 20%;
+  max-width: 50%;
   height: auto;
   object-fit: cover;
 }
