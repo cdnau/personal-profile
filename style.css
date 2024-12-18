@@ -76,71 +76,57 @@ body.dark-theme header {
   background-color: var(--primary-color-dark);
 }
 
-nav ul {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  display:flex;
-  text-align: center;
-  padding: 0.7em 2em;
-  border: 3px solid#FF0072;
-  border-radius: 2px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16),0 3px 6px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease all;
-  z-index: 1;
-  margin: 10px;
-  justify-content: space-between;
+
+@media (max-width: 768px) {
+  nav {
+    font-size: 14px; /* ลดขนาดตัวอักษร */
+    padding: 0px; /* ลบ Padding ส่วนเกิน */
+    display: flex; /* ใช้ Flexbox */
+    justify-content: center; /* จัดรายการทั้งหมดให้อยู่ตรงกลาง */
+    align-items: center; /* จัดให้อยู่แนวกลาง */
+    line-height: 1px; /* ความสูงของ Navbar */
+    background-color: #f8f8f8; /* สีพื้นหลัง Navbar */
+  }
+}
+
+ื.nav_links {
+  display: flex; /* Flexbox สำหรับจัดรายการ */
+    justify-content: center; /* จัดรายการให้อยู่กึ่งกลาง */
+    list-style: none; /* ลบ bullet point ของรายการ */
+    padding: 0;
+    margin: 0;
+}
+
+.nav_links li {
+  display: inline-flex; /* Flexbox สำหรับเนื้อหาภายใน */
+  justify-content: center; /* จัดข้อความให้อยู่กลาง */
+  align-items: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  padding: 10px 20px; /* ช่องว่างแต่ละรายการ */
+  margin: 10px; /* ระยะห่างระหว่างรายการ */
+  border: 3px solid #FF0072; /* กรอบ */
+  border-radius: 5px; /* มุมมน */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); /* เงา */
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
+  text-transform: uppercase; /* ตัวอักษรใหญ่ */
+  letter-spacing: 2px; /* ระยะห่างตัวอักษร */
+  transition: 0.3s ease all; /* เอฟเฟกต์เวลา Hover */
+  cursor: pointer; /* เปลี่ยน Cursor เมื่อ hover */
 }
 
-nav ul.dark-theme {
-  background-color: var(--background-dark);
-  color: var(--text-dark);
+.nav_links li a {
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    color: black; /* สีตัวอักษร */
 }
-nav ul.dark-theme header {
-  background-color: var(--primary-color-dark);
-}
- 
- nav ul:before{
-   transition: 0.5s ease all;
-   position: absolute;
-   top: 0;
-   left: 50%;
-   right: 50%;
-   bottom: 0;
-   opacity: 0;
-   content: '';
-   background-color: #FF0072;
-   z-index: -1;
 
- }
- 
- nav ul:hover,nav ul:focus {
-   color: white;
- }
+.nav_links li:hover {
+    background-color: #FF0072; /* สีพื้นหลังเมื่อ Hover */
+    color: white; /* สีตัวอักษรเมื่อ Hover */
+}
 
- nav ul:hover,nav ul:focus.dark-theme {
-  background-color:#ca1c1c;
-  color:#efc050;
-}
-nav ul:hover,nav ul:focus.dark-theme header {
-  background-color:#c62626;
-}
  
- nav il:hover:before, nav ul:focus::before{
-   transition: 0.5s ease all;
-   left: 0;
-   right: 0;
-   opacity: 1;
- }
- 
- nav il:active {
-   transform: scale(0.9);
- }
- 
+
 .container {
   width: 80%;
   max-width: 1200px;
@@ -165,6 +151,8 @@ nav ul:hover,nav ul:focus.dark-theme header {
   margin-bottom: 2em;
   text-align: center;
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  display: flex;
+  flex-direction: column;
 }
 
 .project p {
@@ -186,29 +174,32 @@ nav ul:hover,nav ul:focus.dark-theme header {
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-  max-width: 100%; /* กำหนดความกว้างตายตัว */
-  height: 250px; /* กำหนดความสูงตายตัว */
-  object-fit: cover;
+  width: 100%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
+  max-height: 250px; /* กำหนดความสูงสูงสุด */
+  object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
+  outline: auto;
 }
 
 .certi {
   border-radius: 15px;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out;
-  width: 50%; /* กำหนดความกว้างตายตัว */
-  height: auto; /* กำหนดความสูงตายตัว */
-  object-fit: cover;
+  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  width: 100%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
+  max-height: 250px; /* กำหนดความสูงสูงสุด */
+  outline: auto;
+  object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
 }
 
 .paper {
   border-radius: 15px;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out;
-  max-width: 50%;
-  height: auto;
-  object-fit: cover;
+  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  width: 100%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
+  max-height: 250px; /* กำหนดความสูงสูงสุด */
+  object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
+  outline: auto;
 }
 
 .project p {
@@ -220,7 +211,15 @@ nav ul:hover,nav ul:focus.dark-theme header {
 }
 
 #small-img {
-  max-width: 20%;
+  border-radius: 15px;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  width: 20%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
+  max-height: auto; /* กำหนดความสูงสูงสุด */
+  object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
+  outline: auto;
+  
 }
 
 .Activities {
@@ -243,6 +242,7 @@ nav ul:hover,nav ul:focus.dark-theme header {
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  outline: auto;
 }
 
 .Activities p {
@@ -252,6 +252,20 @@ nav ul:hover,nav ul:focus.dark-theme header {
   font-weight: 500;
   animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
   font-family:"Kanit";
+}
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  overflow: hidden;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .Activities a {
@@ -274,30 +288,6 @@ body.dark-theme footer {
   background-color: var(--primary-color-dark);
 }
 
-@media (max-width: 768px) {
-  nav {
-    font-size: 14px; /* ลดขนาดตัวอักษร */
-    padding: 10px; /* ปรับช่องว่างให้พอดี */
-    display: flex;
-    flex-wrap: wrap; /* ให้ลิงก์ที่เกินไปเลื่อนไปบรรทัดใหม่ */
-    justify-content: center;
-  }
-
-  nav ul {
-    display: block; /* เปลี่ยนลิงก์ให้เรียงในแนวตั้ง */
-    margin: 5px 0; /* เพิ่มระยะห่างระหว่างลิงก์ */
-  }
-}
-
-.nav_links {
-  list-style: none;
-}
-
-.nav_links li {
-  display: inline-block;
-  padding: 0px 20px;
-  transition: all 0.3s ease all;
-}
 
 button {
    background-color: rgba(0,136,169,1);
@@ -320,4 +310,14 @@ button:hover {
 
 h3 {
   font-family:"Kanit";
+}
+
+.Charity {
+  border-radius: 15px;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  width: 50%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
+  height: auto; /* กำหนดความสูงตายตัวสำหรับรูปภาพ */
+  object-fit: cover; /* หรือใช้ contain ถ้าต้องการให้รูปไม่ตัด */
 }
