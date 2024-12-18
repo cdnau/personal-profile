@@ -2,15 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100..900&display=swap');
 
 :root {
-  --primary-color-light: #091522; /* สีหลักในธีมสว่าง */
-  --primary-color-dark: #212f48; /* สีหลักในธีมมืด */
-  --background-light: #f4f4f4; /* พื้นหลังในธีมสว่าง */
-  --background-dark: #333; /* พื้นหลังในธีมมืด */
-  --text-light: #000000; /* สีข้อความในธีมสว่าง */
-  --text-dark: #000000; /* สีข้อความในธีมมืด */
+  --primary-color-light: #091522; 
+  --primary-color-dark: #212f48; 
+  --background-light: #f4f4f4; 
+  --background-dark: #333; 
+  --text-light: #000000; 
+  --text-dark: #000000; 
 }
 
-/* Animation สำหรับ Fade-In */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -20,7 +19,6 @@
   }
 }
 
-/* เพิ่ม fade-in effect */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -28,7 +26,7 @@ body {
   line-height: 1.6;
   color: #333;
   background: #f4f4f4;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out; 
   background-color: var(--background-light);
   color: var(--text-light);
 }
@@ -42,7 +40,7 @@ body.dark-theme header {
 
 header {
   background: #0073e6;
-  text-align: center; /* จัดกลางรูปภาพ */
+  text-align: center; 
   background-color: var(--primary-color-light);
   color: var(--text-light);
 }
@@ -61,12 +59,6 @@ header img {
   border-radius: 50%;
   animation: fadeIn 0.5s ease-in-out;
 }
-nav {
-  background: #333;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-  background-color: var(--background-light);
-  color: var(--text-light);
-}
 
 body.dark-theme {
   background-color: var(--background-dark);
@@ -79,50 +71,50 @@ body.dark-theme header {
 
 @media (max-width: 768px) {
   nav {
-    font-size: 14px; /* ลดขนาดตัวอักษร */
-    padding: 0px; /* ลบ Padding ส่วนเกิน */
-    display: flex; /* ใช้ Flexbox */
-    justify-content: center; /* จัดรายการทั้งหมดให้อยู่ตรงกลาง */
-    align-items: center; /* จัดให้อยู่แนวกลาง */
-    line-height: 1px; /* ความสูงของ Navbar */
-    background-color: #f8f8f8; /* สีพื้นหลัง Navbar */
+    font-size: 14px; 
+    padding: 0px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    line-height: 1px; 
+    background-color: #f8f8f8; 
   }
 }
 
 ื.nav_links {
-  display: flex; /* Flexbox สำหรับจัดรายการ */
-    justify-content: center; /* จัดรายการให้อยู่กึ่งกลาง */
-    list-style: none; /* ลบ bullet point ของรายการ */
+  display: flex;
+    justify-content: center; 
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
 
 .nav_links li {
-  display: inline-flex; /* Flexbox สำหรับเนื้อหาภายใน */
-  justify-content: center; /* จัดข้อความให้อยู่กลาง */
-  align-items: center; /* จัดข้อความให้อยู่ตรงกลาง */
-  padding: 10px 20px; /* ช่องว่างแต่ละรายการ */
-  margin: 10px; /* ระยะห่างระหว่างรายการ */
-  border: 3px solid #FF0072; /* กรอบ */
-  border-radius: 5px; /* มุมมน */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); /* เงา */
+  display: inline-flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px 20px; 
+  margin: 10px; 
+  border: 3px solid #FF0072;
+  border-radius: 5px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); 
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  text-transform: uppercase; /* ตัวอักษรใหญ่ */
-  letter-spacing: 2px; /* ระยะห่างตัวอักษร */
-  transition: 0.3s ease all; /* เอฟเฟกต์เวลา Hover */
-  cursor: pointer; /* เปลี่ยน Cursor เมื่อ hover */
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  transition: 0.3s ease all; 
+  cursor: pointer;
 }
 
 .nav_links li a {
-    text-decoration: none; /* ลบขีดเส้นใต้ */
-    color: black; /* สีตัวอักษร */
+    text-decoration: none; 
+    color: black; 
 }
 
 .nav_links li:hover {
-    background-color: #FF0072; /* สีพื้นหลังเมื่อ Hover */
-    color: white; /* สีตัวอักษรเมื่อ Hover */
+    background-color: #FF0072; 
+    color: white; 
 }
 
  
@@ -133,24 +125,24 @@ body.dark-theme header {
   margin: auto;
   overflow: hidden;
   padding: 1em;
-  background: #cdcdcd;
+  background: #b0b5ab;
   margin-bottom: 1em;
   border-radius: 7px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .container h1,p {
   
   text-align: center;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out;
   font-family: "Kanit";
 }
 
 .project {
   margin-bottom: 2em;
   text-align: center;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
 }
@@ -158,25 +150,26 @@ body.dark-theme header {
 .project p {
   margin-bottom: 2em;
   text-align: center;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out; 
   font-family: "Kanit";
 }
 
 .project h3 {
   margin-bottom: 0.5em;
   font-size: 1.5em;
-  color: #0073e6;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  color: #0553a1;
+  animation: fadeIn 0.5s ease-in-out; 
+  text-decoration: underline;
 }
 
 .project-img {
   border-radius: 15px;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-  width: 100%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
-  max-height: 300px; /* กำหนดความสูงสูงสุด */
-  object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
+  animation: fadeIn 0.5s ease-in-out; 
+  width: 100%; 
+  max-height: 300px;
+  object-fit: contain;
   outline: auto;
 }
 
@@ -184,21 +177,21 @@ body.dark-theme header {
   border-radius: 15px;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-  width: 100%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
-  max-height: 250px; /* กำหนดความสูงสูงสุด */
+  animation: fadeIn 0.5s ease-in-out;
+  width: 100%; 
+  max-height: 250px; 
   outline: auto;
-  object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
+  object-fit: contain; 
 }
 
 .paper {
   border-radius: 15px;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-  width: 100%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
-  max-height: 250px; /* กำหนดความสูงสูงสุด */
-  object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
+  animation: fadeIn 0.5s ease-in-out; 
+  width: 100%; 
+  max-height: 250px; 
+  object-fit: contain; 
   outline: auto;
 }
 
@@ -207,32 +200,22 @@ body.dark-theme header {
   line-height: 1.5;
   color: #333;
   font-weight: 500;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-}
-
-#small-img {
-  border-radius: 15px;
-  margin: 1em 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-  width: 20%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
-  max-height: auto; /* กำหนดความสูงสูงสุด */
-  object-fit: contain; /* ให้รูปแสดงเต็มโดยไม่ตัด */
-  outline: auto;
-  
+  animation: fadeIn 0.5s ease-in-out; 
 }
 
 .Activities {
   margin-bottom: 2em;
   text-align: center;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out; 
+  font-family:"Kanit";
 }
 
 .Activities h3 {
   margin-bottom: 0.5em;
   font-size: 1.5em;
-  color: #0073e6;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  color: #0553a1;
+  animation: fadeIn 0.5s ease-in-out; 
+  text-decoration: underline;
 }
 
 .Activities-img {
@@ -241,7 +224,7 @@ body.dark-theme header {
   border-radius: 15px;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out; 
   outline: auto;
 }
 
@@ -250,14 +233,14 @@ body.dark-theme header {
   line-height: 1.5;
   color: #333;
   font-weight: 500;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out; 
   font-family:"Kanit";
 }
 .iframe-container {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  padding-bottom: 56.25%; 
   overflow: hidden;
 }
 .iframe-container iframe {
@@ -268,6 +251,11 @@ body.dark-theme header {
   height: 100%;
 }
 
+.project iframe {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
 .Activities a {
   justify-content: space-between;
 }
@@ -281,7 +269,7 @@ footer {
   text-align: center;
   padding: 1em 0;
   margin-top: 1em;
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
+  animation: fadeIn 0.5s ease-in-out; 
   background-color: var(--primary-color-light);
 }
 body.dark-theme footer {
@@ -308,16 +296,12 @@ button:hover {
   background-color: rgba(0,136,169,0.8);
 }
 
-h3 {
-  font-family:"Kanit";
-}
-
 .Charity {
   border-radius: 15px;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-in-out; /* เพิ่ม animation fade-in 0.5 วินาที */
-  width: 50%; /* กำหนดให้ขนาดของรูปเต็มความกว้างของ parent container */
-  height: auto; /* กำหนดความสูงตายตัวสำหรับรูปภาพ */
-  object-fit: cover; /* หรือใช้ contain ถ้าต้องการให้รูปไม่ตัด */
+  animation: fadeIn 0.5s ease-in-out; 
+  width: 50%; 
+  height: auto; 
+  object-fit: cover; 
 }
