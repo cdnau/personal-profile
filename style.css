@@ -96,6 +96,13 @@ nav ul {
   text-decoration: none;
 }
 
+nav ul.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+nav ul.dark-theme header {
+  background-color: var(--primary-color-dark);
+}
  
  nav ul:before{
    transition: 0.5s ease all;
@@ -114,6 +121,14 @@ nav ul {
  nav ul:hover,nav ul:focus {
    color: white;
  }
+
+ nav ul:hover,nav ul:focus.dark-theme {
+  background-color:#ca1c1c;
+  color:#efc050;
+}
+nav ul:hover,nav ul:focus.dark-theme header {
+  background-color:#c62626;
+}
  
  nav il:hover:before, nav ul:focus::before{
    transition: 0.5s ease all;
