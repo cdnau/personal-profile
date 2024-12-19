@@ -68,30 +68,9 @@ body.dark-theme header {
   background-color: var(--primary-color-dark);
 }
 
-@media (max-width: 768px) {
 .intro {
   display: flex;
-  flex-wrap:wrap;
-  word-wrap: break-word;
-  }
-}
-
-@media (max-width: 375px) {
-  .intro {
-      font-size: 14px; /* ลดขนาด font */
-      line-height: 1.4; /* ลดความสูงของบรรทัด */
-      word-wrap: break-word; /* ตัดคำที่ยาว */
-  }
-
-  .skills {
-      margin-left: 0; /* ลดระยะชิด */
-  }
-}
-
-.content {
-  display: flex;
-  flex-direction: column; /* ซ้อนเนื้อหาในแนวตั้ง */
-  align-items: center; /* จัดให้อยู่กลาง */
+  flex-wrap: nowrap;
 }
 
 .textbox {
