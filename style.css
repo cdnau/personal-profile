@@ -95,6 +95,14 @@ body.dark-theme header {
   }
 }
 
+@media (max-width: 365x) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+  }
+
 ื.nav_links {
   display: flex;
   justify-content: center;
