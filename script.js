@@ -1,5 +1,19 @@
-// ฟังก์ชั่นสำหรับการสลับธีม
 function toggleTheme() {
-    // เพิ่มหรือลบคลาส 'dark-theme' จาก <body>
     document.body.classList.toggle('dark-theme');
+}
+
+window.addEventListener("scroll", function () {
+    const backToTopButton = document.getElementById("backToTop");
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add("show"); 
+    } else {
+        backToTopButton.classList.remove("show"); 
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth", 
+    });
 }
