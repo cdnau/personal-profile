@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --primary-color-light: #091522;
@@ -55,9 +56,10 @@ head.dark-theme header {
 
 header img {
   max-width: 30%;
-  border: 5px solid #efc050;
-  border-radius: 50%;
+  border: 4px solid #eddb39;
+  border-radius: 350%;
   animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 body.dark-theme {
@@ -69,18 +71,29 @@ body.dark-theme header {
 }
 
 .intro {
-  display: flex;
+  display:grid;
   flex-wrap: nowrap;
 }
 
 .textbox {
   align-items: center;
   justify-content: center;
-}
-
-.skillbox {
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+
+.skillbox {
+  font-family: "Kanit";
+  justify-content: left;
+  text-align: left;
+  display:contents;
+}
+
+.container h2,h3 {
+  font-family: "Montserrat";
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -99,10 +112,8 @@ body.dark-theme header {
   .intro {
     display: flex;
     flex-direction: column;
-    align-items: center
-}
   }
-
+}
 ื.nav_links {
   display: flex;
   justify-content: center;
@@ -228,6 +239,7 @@ p {
   text-align: center;
   animation: fadeIn 0.5s ease-in-out;
   font-family: "Kanit";
+
 }
 
 .Activities h3 {
@@ -236,6 +248,8 @@ p {
   color: #0553a1;
   animation: fadeIn 0.5s ease-in-out;
   text-decoration: underline;
+  font-family: "kanit";
+  font-weight: 600;
 }
 
 .Activities-img {
@@ -250,11 +264,11 @@ p {
 
 .Activities p {
   font-size: 1em;
-  line-height: 1.5;
   color: #333;
   font-weight: 500;
   animation: fadeIn 0.5s ease-in-out;
   font-family: "Kanit";
+  padding-bottom: 20px;
 }
 .iframe-container {
   position: relative;
@@ -275,9 +289,6 @@ p {
   position: relative;
   width: 100%;
   height: 400px;
-}
-.Activities a {
-  justify-content: space-between;
 }
 .contact p {
   letter-spacing: 0.5px;
@@ -314,3 +325,4 @@ button {
 .navbar {
   display: flex;
 }
+
