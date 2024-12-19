@@ -3,12 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
-  --primary-color-light: #091522;
+  --primary-color-light: #da5656;
   --primary-color-dark: #212f48;
-  --background-light: #f4f4f4;
+  --background-light: #dad67e;
   --background-dark: #333;
-  --text-light: #000000;
-  --text-dark: #000000;
+  --text-dark: #2b2828;
 }
 
 @keyframes fadeIn {
@@ -21,7 +20,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Kanit";
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -42,6 +41,8 @@ body.dark-theme header {
 header {
   background: #0073e6;
   text-align: center;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--primary-color-light);
   color: var(--text-light);
 }
@@ -73,16 +74,64 @@ body.dark-theme header {
 .intro {
   display:grid;
   flex-wrap: nowrap;
+  color:#dad67e;
+}
+
+.intro h1 {
+  text-shadow: 2px 2px 5px red;
+}
+
+.First {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+.Profile {
+  flex: 1; 
+  text-align: center;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; 
+  border: 4px solid #ddd;
+  object-fit: cover;
 }
 
 .textbox {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  overflow-wrap: break-word;
+  flex: 2; 
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.textbox h2 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.textbox p,
+.textbox ul {
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.textbox ul {
+  padding-left: 20px;
+}
+
+.textbox ul li {
+  list-style-type: disc;
+}
 
 .skillbox {
   font-family: "Kanit";
@@ -158,6 +207,7 @@ body.dark-theme header {
   padding: 1em;
   background: #b0b5ab;
   margin-bottom: 1em;
+  margin-top: 1em;
   border-radius: 7px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out;
